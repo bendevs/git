@@ -231,7 +231,7 @@ git commit -a
 
         <section>
           <h2>Historial de los commits</h2>
-          <h5>git log</h5>
+          <h5>git log, git show [hash-de-commit]</h5>
 <pre><code data-trim data-noescape>
 commit 8fa49b94256bce45e6017eb807b67f5fee2fa77b
 Author: Mary Rosales <eughymar22@gmail.com>
@@ -244,6 +244,77 @@ Author: Elmer Mendoza <defreddyelmer@gmail.com>
 Date:   Mon Jan 8 11:40:11 2018 -0400
 
     Adición de conceptos fundamentales sobre VCS
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Listar repositorios remotos</h2>
+<pre><code data-trim data-noescape>
+git remote --verbose
+</code></pre>
+<pre><code data-trim data-noescape>
+gitlab  https://gitlab.com/elmerfreddy/git.git (fetch)
+gitlab  https://gitlab.com/elmerfreddy/git.git (push)
+origin  https://github.com/elmerfreddy/git.git (fetch)
+origin  https://github.com/elmerfreddy/git.git (push)
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Repositorios remotos</h2>
+          <p>Añadir repositorio remoto</p>
+<pre><code data-trim data-noescape>
+git remote add [nombre-repositorio] [url-repositorio]
+</code></pre>
+          <p>Eliminar repositorio remoto</p>
+<pre><code data-trim data-noescape>
+git remote rm [nombre-repositorio] [url-repositorio]
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Recibiendo del repositorio remoto</h2>
+          <h5>git pull</h5>
+<pre><code data-trim data-noescape>
+git pull [nombre-repositorio] [nombre-rama]
+</code></pre>
+<pre><code data-trim data-noescape>
+git pull origin master
+
+From https://github.com/elmerfreddy/git
+ * branch            master     -> FETCH_HEAD
+Updating fa3bfeb..d59d2b1
+Fast-forward
+ img/basic-remote-workflow.png | Bin 0 -> 76802 bytes
+ img/flujo.png                 | Bin 0 -> 7745 bytes
+ img/rendimiento.png           | Bin 0 -> 19442 bytes
+ img/staging.jpg               | Bin 0 -> 66869 bytes
+ index.html                    |  96 ++++++++++++++++++++++++++++++++
+ 5 files changed, 96 insertions(+)
+ create mode 100644 img/basic-remote-workflow.png
+ create mode 100644 img/flujo.png
+ create mode 100644 img/rendimiento.png
+ create mode 100644 img/staging.jpg
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Enviando al repositorio remoto</h2>
+          <h5>git push</h5>
+<pre><code data-trim data-noescape>
+git push [nombre-repositorio] [nombre-rama]
+</code></pre>
+<pre><code data-trim data-noescape>
+git push origin master
+
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 8.04 KiB | 0 bytes/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/elmerfreddy/git.git
+   ee9f91f..d59d2b1  master -> master
 </code></pre>
         </section>
 
