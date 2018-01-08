@@ -123,7 +123,36 @@ $ echo -n versionamiento | sha1sum
           </code></pre>
         </section>
 
+        <section>
+          <h2>Instalación</h2>
+          <h5>Linux:</h5>
+<pre><code data-trim data-noescape>
+apt-get install git # Debian / Ubuntu
+yum install git-all # Fedora
+</code></pre>
+          <h5>Windows:</h5>
+          <p><a href="http://git-scm.com/download/win">git-scm.com/download/win</a></p>
+          <h5>Mac:</h5>
+          <p><a href="http://git-scm.com/download/mac">git-scm.com/download/mac</a></p>
+        </section>
+
+        <section>
+          <h2>Configuración</h2>
+          <p>Establecer nombre y correo electrónico</p>
+<pre><code data-trim data-noescape>
+git config --global user.name "Elmer Mendoza"
+git config --global user.email "defreddyelmer@gmail.com"
+</code></pre>
+          <p>Ver la configuración establecida (~/.gitconfig)</p>
+<pre><code data-trim data-noescape>
+git config --list
+
+user.name=Elmer Mendoza
+user.email=defreddyelmer@gmail.com
+</code></pre>
+        </section>
       </div>
+    </div>
 
     </div>
 
