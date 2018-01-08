@@ -88,6 +88,41 @@
             <li>Alto rendimiento</li>
           </ol>
         </section>
+
+        <section style="text-align: left;">
+          <h2>Open Source</h2>
+          <p>código fuente disponible:</p>
+          <p>
+            <a href="https://github.com/git/git">https://github.com/git/git</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Integridad</h2>
+          Conjunto de instantáneas de un mini sistema de archivos<br />
+          <img src="img/instantaneas.png">
+        </section>
+
+        <section>
+          <h2>Integridad</h2>
+          <ul>
+            <li>se calcula un hash de cada instantánea</li>
+            <li>SHA-1 checksum, 40 caracteres</li>
+            <li>se verifica antes de escribir cualquier dato</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ejemplo de sha1</h2>
+          <p>Calculamos el sha-1 de la palabra "versionamiento"</p>
+          <p>La misma palabra (o archivo) genera siempre el mismo hash</p>
+          <pre><code class="bash">
+$ echo -n versionamiento | sha1sum
+
+103e878be00120776aa8682e848253d7c3678d12  -
+          </code></pre>
+        </section>
+
       </div>
 
     </div>
